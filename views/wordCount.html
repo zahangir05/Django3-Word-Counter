@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Word Count Page</title>
+</head>
+<body>
+<a href="{% url 'home' %}">Back to Home page</a>
+<div align="center">
+    <h1>Django Word Count Page</h1>
+    <p><b>Your text is:</b> {{text}}, <b>and number of words is:</b> {{length}}</p>
+    <br/>
+    {% for k, v in textDict %}
+    {{k}}: {{v}}<br/>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
