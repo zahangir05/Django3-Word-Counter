@@ -25,8 +25,7 @@ def count(request):
     # textDict = {k: v for k, v in sorted(textDict.items(), key=lambda x: x[1], reverse=True)}
     textDict = sorted(textDict.items(), key=lambda x: x[1], reverse=True)
     print(type(textDict))
-    return render(request, 'wordCount.html', {'text': text, 'length': length, 'textDict':textDict})
-
+    return render(request, 'wordCount.html', {'text': text, 'length': length, 'textDict': textDict})
 
 def about(request):
     return render(request, 'about.html')
