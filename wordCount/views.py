@@ -27,5 +27,6 @@ def count(request):
     print(type(textDict))
     return render(request, 'wordCount.html', {'text': text, 'length': length, 'textDict': textDict})
 
+
 def about(request):
     return render(request, 'about.html')
