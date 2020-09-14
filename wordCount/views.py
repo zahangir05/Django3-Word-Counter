@@ -12,19 +12,14 @@ def count(request):
     length = len(textList)
     textDict = {}
 
-    print("LL: {}".format(type(textDict)))
-    print("dd: {}".format(type(textDict)))
 
     for t in textList:
-        # print(t, end=", ")
         if t in textDict:
             textDict[t] += 1
         else:
             textDict[t] = 1
 
-    # textDict = {k: v for k, v in sorted(textDict.items(), key=lambda x: x[1], reverse=True)}
     textDict = sorted(textDict.items(), key=lambda x: x[1], reverse=True)
-    print(type(textDict))
     return render(request, 'wordCount.html', {'text': text, 'length': length, 'textDict': textDict})
 
 
