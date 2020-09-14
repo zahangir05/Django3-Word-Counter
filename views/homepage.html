@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <title>Django Word Count Home Page</title>
 </head>
 <body>
@@ -9,8 +15,8 @@
 <div align="center">
     <h1>Welcome to Django Word Count Home Page!!..</h1>
     <form action="{% url 'count' %}">
-        <textarea rows="15" cols="75" name="text"></textarea><br/>
-        <input type="submit" value="Count Words"/>
+        <textarea rows="15" cols="75" name="text"></textarea><br/><br/>
+        <input type="submit" value="Count Words" class="btn btn-success"/>
     </form>
 
 </div>
